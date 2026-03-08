@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseEmailitClient {
 
     public static final String DEFAULT_API_BASE = "https://api.emailit.com";
-    static final String SDK_VERSION = "2.0.0";
+    static final String SDK_VERSION = "2.0.1";
 
     private static final MediaType JSON_MEDIA_TYPE = MediaType.get("application/json; charset=utf-8");
     private static final Gson GSON = new Gson();

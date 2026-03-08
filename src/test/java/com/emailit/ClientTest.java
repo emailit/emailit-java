@@ -21,7 +21,7 @@ class ClientTest {
 
     @Test
     void versionIsCorrect() {
-        assertThat(Emailit.VERSION).isEqualTo("2.0.0");
+        assertThat(Emailit.VERSION).isEqualTo("2.0.1");
     }
 
     @Test
