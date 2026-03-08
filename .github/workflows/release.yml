@@ -1,5 +1,11 @@
 name: Release
 
+# Required GitHub Secrets:
+#   MAVEN_CENTRAL_USERNAME - Sonatype Central token username (generate at https://central.sonatype.com/account)
+#   MAVEN_CENTRAL_TOKEN    - Sonatype Central token password
+#   GPG_PRIVATE_KEY        - GPG private key (run: gpg --armor --export-secret-keys YOUR_KEY_ID)
+#   GPG_PASSPHRASE         - Passphrase for the GPG key
+
 on:
   push:
     tags:
@@ -90,11 +96,11 @@ jobs:
             <dependency>
                 <groupId>com.emailit</groupId>
                 <artifactId>emailit-java</artifactId>
-                <version>${{ github.ref_name }}</version>
+                <version>LATEST</version>
             </dependency>
             ```
 
             **Gradle**
             ```groovy
-            implementation 'com.emailit:emailit-java:${{ github.ref_name }}'
+            implementation 'com.emailit:emailit-java:+'
             ```
